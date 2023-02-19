@@ -4,6 +4,9 @@ Thư viện của thầy Hoàn: https://github.com/PhanHoan/TTVXL_ST2/tree/2_Nha
 Có một số bài mình dùng hàm kiểm tra nút nhấn khác với hàm của thầy, cách của mình có nhược điểm
 so với hàm của thầy là chỉ biết được lúc nhấn nhưng không có hiệu ứng nhấn giữ.
 Còn các hiệu ứng khác thì vẫn đáp ứng tốt, như chống dội, hay không làm gián đoạn chương trình chính.
+
+Phương pháp:
+
 - Dùng 1 biến 16bit để kiểm tra giá trị của ngõ vào nút nhấn
 - Kiểm tra biến đó tùy vào nút nhấn tích cực mức cao hoặc mức thấp rồi xử lý công việc cần thực
 hiện.
