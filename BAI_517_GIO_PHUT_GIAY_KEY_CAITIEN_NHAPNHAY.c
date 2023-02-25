@@ -47,6 +47,8 @@ void check_input(){
       if(che_do == 6) che_do = 0;
       else che_do += 2;
       nn = 0;
+      if(che_do == 6) enable_interrupts(INT_TIMER1);
+      else disable_interrupts(INT_TIMER1);
    } 
 }
 
@@ -83,13 +85,13 @@ void main(){
          s7seg.led[che_do]   = 0xff;
          s7seg.led[che_do+1] = 0xff;
       }
-      if(che_do < 6)
-         if(dem==29){
+      if(che_do < 6){  //neu dang chinh gio, phut hoac giay
+         if(dem==29){  // tat sang voi dem = 29 lan
             dem=0;
             nn = !nn;  
          }
          else dem++;
-      
+      }
       check_input();
       s7seg_display();
    }

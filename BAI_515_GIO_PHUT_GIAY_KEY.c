@@ -43,8 +43,14 @@ void check_input(){
       }
    }
    if(!inputcd(MOD)){
-      if(mode == 6) mode = 0;
-      else mode += 2;
+      if(mode == 6) {
+         mode = 0;
+      }
+      else {
+         mode += 2;
+      }
+      if(mode == 6) enable_interrupts(INT_TIMER1);
+      else disable_interrupts(INT_TIMER1);
    } 
 }
 
